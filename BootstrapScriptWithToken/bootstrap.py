@@ -31,6 +31,7 @@ import time
 # Japan: "www.cv-prod-apnortheast-1.arista.io"
 # Australia: "www.cv-prod-ausoutheast-1.arista.io"
 # United Kingdon: "www.cv-prod-uk-1.arista.io"
+# India: "www.cv-prod-india-1.arista.io"
 cvAddr = ""
 
 # enrollment token to be copied from CVaaS Device Registration page
@@ -46,6 +47,7 @@ cvproxy = ""
 #      i.e. TA versions < 1.9.0
 # - `cvproxy` parameter value is provided and TA version is <1.19
 # This needs to be a http URL pointing to a SWI image on the local network.
+# This script does NOT support Universal SWI
 eosUrl = ""
 
 '''
