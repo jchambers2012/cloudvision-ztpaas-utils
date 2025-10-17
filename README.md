@@ -37,6 +37,7 @@ Bootstrap script with a token provides an alternative way of ZTP enrolling an Ar
 | Japan| `www.cv-prod-apnortheast-1.arista.io` |
 | Australia | `www.cv-prod-ausoutheast-1.arista.io` |
 | United Kingdon | `www.cv-prod-uk-1.arista.io` |
+| India | `www.cv-prod-india-1.arista.io` |
 
 !!! Warning
 
