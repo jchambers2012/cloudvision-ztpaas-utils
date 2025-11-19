@@ -189,10 +189,10 @@ def configureAndRestartNTP(ntpServer):
    first = True
    for server in ntpServer.split(","):
       if first:
-         configureNtpCmds.append(f"ntp server {server} prefer iburst")
+         configureNtpCmds.append("ntp server {server} prefer iburst".format(server=server))
          first = False
       else:
-         configureNtpCmds.append(f"ntp server {server} iburst")
+         configureNtpCmds.append("ntp server {server} iburst".format(server=server))
    configureNtpCmds.append("exit")
    rc, cmdOut = cli.runCommands(configureNtpCmds)
    if rc:
