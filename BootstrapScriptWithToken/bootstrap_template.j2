@@ -186,14 +186,13 @@ def configureAndRestartNTP(ntpServer):
    # Command to configure and restart ntp process.
    # Note: iburst flag is added for faster synchronization
    configureNtpCmds = ["en", "configure"]
-   first = False
+   first = True
    for server in ntpServer.split(","):
-      if not first:
+      if first:
          configureNtpCmds.append(f"ntp server {server} prefer iburst")
-         first = True
+         first = False
       else:
          configureNtpCmds.append(f"ntp server {server} iburst")
-      first = True
    configureNtpCmds.append("exit")
    rc, cmdOut = cli.runCommands(configureNtpCmds)
    if rc:
