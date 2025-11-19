@@ -188,8 +188,9 @@ def configureAndRestartNTP(ntpServer):
    configureNtpCmds = ["en", "configure"]
    first = False
    for server in ntpServer.split(","):
-      if first:
+      if not first:
          configureNtpCmds.append(f"ntp server {server} prefer iburst")
+         first = True
       else:
          configureNtpCmds.append(f"ntp server {server} iburst")
       first = True
